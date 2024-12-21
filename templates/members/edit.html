@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Editar Miembro</h1>
+<form method="POST">
+    <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" name="name" id="name" class="form-control" value="{{ member[1] }}">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" name="email" id="email" class="form-control" value="{{ member[2] }}">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Teléfono</label>
+        <input type="text" name="phone" id="phone" class="form-control" value="{{ member[3] }}">
+    </div>
+    <button type="submit" class="btn btn-success">Actualizar</button>
+</form>
+{% endblock %}

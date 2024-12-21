@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="jumbotron text-center bg-light">
+    <h1 class="display-4">¡Bienvenido al Sótano de películas!</h1>
+    <p class="lead">Gestiona películas, miembros y préstamos de forma sencilla.</p>
+    <hr class="my-4">
+    <p>Selecciona una opción del menú o explora nuestros planes a continuación:</p>
+</div>
+
+<div class="row text-center">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Plan Básico</h5>
+                <p class="card-text">Acceso limitado al catálogo de películas y gestión de miembros.</p>
+                <h4 class="card-price">$9.99/mes</h4>
+                <a href="#" class="btn btn-outline-primary">Elegir Plan</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Plan Premium (Recomendado)</h5>
+                <p class="card-text">Incluye todas las funcionalidades, con estadísticas y reportes avanzados.</p>
+                <h4 class="card-price">$19.99/mes</h4>
+                <a href="#" class="btn btn-primary">Elegir Plan</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Plan Empresarial</h5>
+                <p class="card-text">Ideal para bibliotecas grandes: soporte dedicado y funciones personalizadas.</p>
+                <h4 class="card-price">$49.99/mes</h4>
+                <a href="#" class="btn btn-outline-success">Elegir Plan</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5 text-center">
+    <p class="text-muted">¡Gracias por confiar en nuestra plataforma! Si necesitas ayuda, contáctanos.</p>
+</div>
+{% endblock %}

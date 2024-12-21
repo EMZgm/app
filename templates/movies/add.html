@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Agregar Película</h1>
+<form method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Título</label>
+        <input type="text" name="title" id="title" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="director" class="form-label">Director</label>
+        <input type="text" name="director" id="director" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="genre" class="form-label">Género</label>
+        <input type="text" name="genre" id="genre" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="year" class="form-label">Año</label>
+        <input type="number" name="year" id="year" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success">Agregar</button>
+</form>
+{% endblock %}

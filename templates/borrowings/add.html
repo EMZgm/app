@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Registrar Préstamo</h1>
+<form method="POST">
+    <div class="mb-3">
+        <label for="movie_id" class="form-label">Película</label>
+        <select name="movie_id" id="movie_id" class="form-control">
+            {% for movie in movies %}
+            <option value="{{ movie[0] }}">{{ movie[1] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="member_id" class="form-label">Miembro</label>
+        <select name="member_id" id="member_id" class="form-control">
+            {% for member in members %}
+            <option value="{{ member[0] }}">{{ member[1] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="borrow_date" class="form-label">Fecha de Préstamo</label>
+        <input type="date" name="borrow_date" id="borrow_date" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="return_date" class="form-label">Fecha de Devolución (opcional)</label>
+        <input type="date" name="return_date" id="return_date" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success">Registrar</button>
+</form>
+{% endblock %}

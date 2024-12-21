@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Lista de Préstamos</h1>
+<a href="{{ url_for('add_borrowing') }}" class="btn btn-primary mb-3">Registrar Préstamo</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Película</th>
+            <th>Miembro</th>
+            <th>Fecha de Préstamo</th>
+            <th>Fecha de Devolución</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for borrowing in borrowings %}
+        <tr>
+            <td>{{ borrowing[0] }}</td>
+            <td>{{ borrowing[1] }}</td>
+            <td>{{ borrowing[2] }}</td>
+            <td>{{ borrowing[3] }}</td>
+            <td>{{ borrowing[4] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
